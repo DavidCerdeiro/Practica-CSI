@@ -55,7 +55,7 @@ public class IfrStadiums extends JFrame {
 		butSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					tabResult.setModel( new StadiumsTableModel(Stadium.Search(txtName.getText())));
+					tabResult.setModel(new StadiumsTableModel(Stadium.Search(txtName.getText())));
 				} catch (IOException | SQLException ex) {
 					JOptionPane.showMessageDialog(null, "Ha ocurrido un error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 				} }
@@ -68,8 +68,10 @@ public class IfrStadiums extends JFrame {
 		@Override
 		public void mouseClicked(MouseEvent e) {
 			 if (e.getClickCount() == 2) { 
+				 
 				 int iRow = ((JTable)e.getSource()).getSelectedRow();
 				 Stadium stadium = ((StadiumsTableModel)tabResult.getModel()).getData(iRow);
+				 
 				 if (stadium != null)
 					 //frmMain.ShowInternalFrame(new IfrStadium(stadium), 10, 27, 400, 100);
 					 new IfrStadium(stadium).show(); //Se utiliza show ya que a nosotros no nos funciona InternalFrame (puesto arriba).
