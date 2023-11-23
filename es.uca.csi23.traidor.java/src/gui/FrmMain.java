@@ -70,14 +70,24 @@ public class FrmMain {
 				new IfrStadium().show();		//Se utiliza show ya que a nosotros no nos funciona InternalFrame (puesto arriba).
 			}
 		});
+		
 		mnuNew.add(mitNewStadium);
 		
 		JMenu mnuSearch = new JMenu("Buscar");
 		menuBar.add(mnuSearch);
 		
-		JMenuItem mitSearchStadium = new JMenuItem("Stadium");
+		JMenuItem mitSearchStadium = new JMenuItem("Stadiums");
+		mitSearchStadium.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//ShowInternalFrame(new IfrStadium(), 100, 270, 400, 192);
+				new IfrStadiums(getThis()).show();		//Se utiliza show ya que a nosotros no nos funciona InternalFrame (puesto arriba).
+			}
+		});
+		
 		mnuSearch.add(mitSearchStadium);
 	}
+	
+	public FrmMain getThis() { return this; }
 	
 	public void ShowInternalFrame(JFrame ifr, int iX, int iY, int iWidth, int iHeight) {
 		ifr.setBounds(iX, iY, iWidth, iHeight);

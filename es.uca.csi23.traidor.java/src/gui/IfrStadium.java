@@ -63,4 +63,12 @@ public class IfrStadium extends JFrame {
 		butSave.setBounds(10, 50, 85, 21);
 		contentPane.add(butSave);
 	}
+	
+	public IfrStadium(Stadium stadium) {
+		this();
+		if( stadium == null)
+			throw new IllegalArgumentException("El parámetro 'stadium' no puede ser nulo.");
+		txtName.setText(stadium.getName());
+		_stadium = stadium; 
+	}
 }
