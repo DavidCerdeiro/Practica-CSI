@@ -79,7 +79,7 @@ public class Stadium {
 	
 	public void Delete() throws IOException, SQLException{
 		if(_iId == null || _dtDeletedAt != null)
-			throw new IllegalStateException("El elemento ha sido borrado previamente, o no se encunetra en la base de datos.");
+			throw new IllegalStateException("El elemento ha sido borrado previamente, o no se encuentra en la base de datos.");
 		
 		Connection con = null;
 		try {

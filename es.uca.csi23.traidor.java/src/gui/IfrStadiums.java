@@ -67,13 +67,12 @@ public class IfrStadiums extends JFrame {
 		tabResult.addMouseListener(new MouseAdapter() {
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			// Se activa con doble clic sobre una fila.
 			 if (e.getClickCount() == 2) { 
-			 int iRow = ((JTable)e.getSource()).getSelectedRow();
-			 Stadium stadium = ((StadiumsTableModel)tabResult.getModel()).getData(iRow);
-			 if (stadium != null)
-				 //frmMain.ShowInternalFrame(new IfrStadium(stadium), 10, 27, 400, 100);
-				 new IfrStadium(stadium).show();
+				 int iRow = ((JTable)e.getSource()).getSelectedRow();
+				 Stadium stadium = ((StadiumsTableModel)tabResult.getModel()).getData(iRow);
+				 if (stadium != null)
+					 //frmMain.ShowInternalFrame(new IfrStadium(stadium), 10, 27, 400, 100);
+					 new IfrStadium(stadium).show(); //Se utiliza show ya que a nosotros no nos funciona InternalFrame (puesto arriba).
 			 }
 		}
 		});

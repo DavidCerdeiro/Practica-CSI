@@ -26,7 +26,6 @@ public class FrmMain {
 					FrmMain window = new FrmMain();
 					window.frmFtbolFantstico.setVisible(true);
 				} catch (Exception ex) {
-					ex.printStackTrace();
 					JOptionPane.showMessageDialog(null, "Ha ocurrido un error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
