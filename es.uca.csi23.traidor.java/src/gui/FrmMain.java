@@ -15,7 +15,7 @@ import java.awt.event.ActionEvent;
 public class FrmMain {
 
 	private JFrame frmFtbolFantstico;
-
+	
 	/**
 	 * Launch the application.
 	 */
